@@ -1,0 +1,19 @@
+{
+  "name": "react-ssr",
+  "description": "React 18 SSR",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "remote",
+    "shell"
+  ],
+  "scripts": {
+    "start": "concurrently \"cd shell && yarn start\" \"cd remote && yarn start\"",
+    "start:shell": "cd shell && yarn start",
+    "start:remote": "cd remote && yarn start"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.4.5"
+  }
+}
