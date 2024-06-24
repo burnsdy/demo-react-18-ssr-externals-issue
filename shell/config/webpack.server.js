@@ -2,6 +2,7 @@ const path = require("path");
 const { merge } = require("webpack-merge");
 const shared = require("./webpack.shared");
 const moduleFederationPlugin = require("./module-federation");
+const nodeExternals = require("webpack-node-externals");
 
 /**
  * @type {import('webpack').Configuration}
@@ -17,6 +18,7 @@ const webpackConfig = {
     filename: "[name].js",
   },
   plugins: [...moduleFederationPlugin.server],
+  externals: [nodeExternals()],
   stats: {
     colors: true,
   },

@@ -21,7 +21,16 @@ module.exports = {
       remotes: {
         remote: "remote@http://localhost:3001/server/remoteEntry.js",
       },
-      shared: [{ react: deps.react, "react-dom": deps["react-dom"] }],
+      shared: {
+        // react: {
+        //   singleton: true,
+        //   requiredVersion: deps.react,
+        // },
+        // "react-dom": {
+        //   singleton: true,
+        //   requiredVersion: deps["react-dom"],
+        // },
+      },
     }),
   ],
 };

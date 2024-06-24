@@ -16,6 +16,7 @@ const webpackConfig = {
     filename: "[name].js",
     libraryTarget: "commonjs-module",
   },
+  externals: ["react", "react-dom"],
   plugins: [...moduleFederationPlugin.server],
 };
 
